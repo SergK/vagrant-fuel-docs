@@ -21,7 +21,7 @@ Codename:       precise
     - you can edit file `Vagrantfile` if you need to forward some ports or change virtual machine parameters
 5. `vagrant up`
 6. open [http://localhost:8080](http://localhost:8080)
-7. You can work with project which is in `./fuel-docs` (we leave git repository on the host node. This helps us to use the same git configurations as on the host node are: _username, aliases, etc_ )
+7. You can work with project which is in `./fuel-docs` (we leave git repository on the host node. This helps us to use the same git configurations as on the host node: _username, aliases, etc_ )
 8. To build project use: `./build.sh` 
 
 `Usage: ./build.sh { help | html | singlehtml | pdf | latextpdf | epub }`

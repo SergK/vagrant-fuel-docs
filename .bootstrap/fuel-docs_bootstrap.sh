@@ -93,4 +93,7 @@ sudo service nginx restart
 cd /home/vagrant/fuel-docs && make html
 cd /home/vagrant/fuel-docs && make pdf
 
-echo "After building documents you can access them using http://localhost:8080"
+# clear screen before info
+clear
+echo "You can access documents using http://localhost:8080"
+echo "Your git project is on your host in ./fuel-docs"

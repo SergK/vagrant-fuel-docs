@@ -5,7 +5,10 @@ VAGRANTFILE_API_VERSION = "2"
 
 # if we have already clone project just skip this hook
 # but the best way is to use vagrant plugins
-system('if [ ! -d ./fuel-docs/.git ] ; then git clone https://github.com/stackforge/fuel-docs;fi')
+# we need to get path to Vagrantfile 
+# in order not to git clone each time if we are in some other vagrant "subfolder"
+system({"VPATH" => File.dirname(__FILE__)}, "if [ ! -d ${VPATH}/fuel-docs/.git ] ; then git clone https://github.com/stackforge/fuel-docs;fi")
+
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
