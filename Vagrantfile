@@ -24,5 +24,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :forwarded_port, guest: 80, host: 8080
 
   config.vm.synced_folder "fuel-docs/", "/home/vagrant/fuel-docs"
+  # we don't need default "sync" folder
+  config.vm.synced_folder ".", "/vagrant", disabled: true
 
 end
