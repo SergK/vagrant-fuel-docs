@@ -7,7 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 # but the best way is to use vagrant plugins
 # we need to get path to Vagrantfile 
 # in order not to git clone each time if we are in some other vagrant "subfolder"
-system({"VPATH" => File.dirname(__FILE__)}, "if [ ! -d ${VPATH}/fuel-docs/.git ] ; then git clone https://github.com/stackforge/fuel-docs;fi")
+system({"VPATH" => File.dirname(__FILE__)}, "if [ ! -d ${VPATH}/fuel-docs/.git ] ; then git clone https://github.com/stackforge/fuel-docs ${VPATH}/fuel-docs;fi")
 
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
