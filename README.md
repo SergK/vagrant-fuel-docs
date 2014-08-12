@@ -21,12 +21,23 @@ Codename:       precise
     - you can edit file `Vagrantfile` if you need to forward some ports or change virtual machine parameters
 5. `vagrant up`
 6. open [http://localhost:8080](http://localhost:8080)
+7. You can work with project which is in `./fuel-docs` (we leave git repository on the host node. This helps us to use the same git configurations as on the host node are: _username, aliases, etc_ )
+8. To build project use: `./build.sh` 
+`Usage: ./build.sh { help | html | singlehtml | pdf | latextpdf | epub }`
 
 That's all
 
-You can use `vagrant ssh` to enter the shell of box and work with project
+You can use `vagrant ssh` to enter the shell of box
 
-### TODO
+#### More information
 
-- Need integration with gerrit, etc
-- forward folder from VM to local
+Actually we clone project on the host system and not on the VM, this ensures us for using the same git configuration (global) options that are defined for user in the host system (_username, aliases, etc_ ).
+_- So why do we need vagrant separate box? We can use **virtualenv**_
+_- Actually: **YES**. But what if:
+1. You host machine running Windows
+2. You are running CentOS or (RHEL), of course you can install all the necessary using yum
+3. You don't want to install some libSOMETING-dev in your system or any other packages that we need to build the project
+**4. You want to install project with "one click"**
+5. ...
+_
+

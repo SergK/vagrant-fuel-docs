@@ -9,8 +9,8 @@ rm /home/vagrant/VBoxGuestAdditions.iso
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y
 sudo apt-get install git -y
 
-git clone https://github.com/stackforge/fuel-docs
-sudo chown vagrant.vagrant -R /home/vagrant/fuel-*
+#git clone https://github.com/stackforge/fuel-docs
+sudo chown vagrant.vagrant -R /home/vagrant/
 
 # install packages for building docs
 sudo apt-get install python-pip python-dev make imagemagick libjpeg-dev inkscape nginx-light -y
