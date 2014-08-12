@@ -16,7 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         v.cpus = 1
   end
 
-  config.vm.provision :shell, path: "./bootstrap/fuel-docs_bootstrap.sh"
+  config.vm.provision :shell, path: "./.bootstrap/fuel-docs_bootstrap.sh"
 
   config.vm.network :forwarded_port, guest: 80, host: 8080
 
